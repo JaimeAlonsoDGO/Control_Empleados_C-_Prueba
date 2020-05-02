@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\bin\Debug\MiBiblioteca.dll
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\bin\Debug\MiBiblioteca.pdb
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\obj\Debug\MiBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\obj\Debug\MiBiblioteca.dll
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\obj\Debug\MiBiblioteca.pdb
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\MiBiblioteca\obj\Debug\MiBiblioteca.csprojAssemblyReference.cache

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdministraciónEmpleadosDataSet" targetNamespace="http://tempuri.org/AdministraciónEmpleadosDataSet.xsd" xmlns:mstns="http://tempuri.org/AdministraciónEmpleadosDataSet.xsd" xmlns="http://tempuri.org/AdministraciónEmpleadosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AdministraciónEmpleadosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AdministraciónEmpleadosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ControlEmpleados.Properties.Settings.GlobalReference.Default.AdministraciónEmpleadosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PuestoTableAdapter" GeneratorDataComponentClassName="PuestoTableAdapter" Name="Puesto" UserDataComponentName="PuestoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AdministraciónEmpleadosConnectionString (Settings)" DbObjectName="AdministraciónEmpleados.dbo.Puesto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nombre_Puesto FROM dbo.Puesto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre_Puesto" DataSetColumn="Nombre_Puesto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdministraciónEmpleadosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AdministraciónEmpleadosDataSet" msprop:Generator_UserDSName="AdministraciónEmpleadosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Puesto" msprop:Generator_TableClassName="PuestoDataTable" msprop:Generator_TableVarName="tablePuesto" msprop:Generator_TablePropName="Puesto" msprop:Generator_RowDeletingName="PuestoRowDeleting" msprop:Generator_RowChangingName="PuestoRowChanging" msprop:Generator_RowEvHandlerName="PuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="PuestoRowDeleted" msprop:Generator_UserTableName="Puesto" msprop:Generator_RowChangedName="PuestoRowChanged" msprop:Generator_RowEvArgName="PuestoRowChangeEvent" msprop:Generator_RowClassName="PuestoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre_Puesto" msprop:Generator_ColumnVarNameInTable="columnNombre_Puesto" msprop:Generator_ColumnPropNameInRow="Nombre_Puesto" msprop:Generator_ColumnPropNameInTable="Nombre_PuestoColumn" msprop:Generator_UserColumnName="Nombre_Puesto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
