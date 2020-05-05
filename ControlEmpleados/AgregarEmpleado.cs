@@ -104,6 +104,7 @@ namespace ControlEmpleados
                     //Ejecutando Proceso almacenado para guardar Foto
                     GuardarFoto(imagen, TxtID.Text.Trim());
                     MessageBox.Show("Guardado exitosamente.");
+                    
                 }//Try
                 catch (Exception error)
                 {
@@ -111,5 +112,21 @@ namespace ControlEmpleados
                 }//catch
             }//if                
         }//BtnAgregar Empleado
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TxtID.Text = "";
+            TxtNombre.Text = "";
+            TxtApellidoPaterno.Text = "";
+            TxtApellidoMaterno.Text = "";
+            TxtEstadoCivil.Text = "";
+            TxtLugarNac.Text = "";
+            TxtCurp.Text = "";
+            TxtNss.Text = "";
+            TxtRfc.Text = "";
+            TxtDomicilio.Text = "";
+            TxtTelefono.Text = "";
+            TxtCorreo.Text = "";
+        }
     }
 }
