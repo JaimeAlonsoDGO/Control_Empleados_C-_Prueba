@@ -66,7 +66,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.CbEstatus = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -106,14 +106,20 @@
             // 
             this.TxtID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.TxtID.Location = new System.Drawing.Point(526, 42);
+            this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(220, 21);
+            this.TxtID.SoloNumeros = false;
+            this.TxtID.TabIndex = 99;
+            this.TxtID.TabStop = false;
+            this.TxtID.Tag = "El ID se definirá automáticamente.";
+            this.TxtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.TxtNombre.Location = new System.Drawing.Point(458, 74);
             this.TxtNombre.Size = new System.Drawing.Size(288, 21);
-            this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnSalir
             // 
@@ -272,7 +278,7 @@
             this.TxtLugarNac.Size = new System.Drawing.Size(197, 21);
             this.TxtLugarNac.SoloNumeros = false;
             this.TxtLugarNac.TabIndex = 6;
-            this.TxtLugarNac.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtLugarNac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtLugarNac.Validar = true;
             // 
             // TxtRfc
@@ -283,7 +289,7 @@
             this.TxtRfc.Size = new System.Drawing.Size(288, 21);
             this.TxtRfc.SoloNumeros = false;
             this.TxtRfc.TabIndex = 9;
-            this.TxtRfc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtRfc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtRfc.Validar = true;
             // 
             // TxtEstadoCivil
@@ -294,7 +300,7 @@
             this.TxtEstadoCivil.Size = new System.Drawing.Size(269, 21);
             this.TxtEstadoCivil.SoloNumeros = false;
             this.TxtEstadoCivil.TabIndex = 4;
-            this.TxtEstadoCivil.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtEstadoCivil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtEstadoCivil.Validar = true;
             // 
             // TxtApellidoMaterno
@@ -305,7 +311,7 @@
             this.TxtApellidoMaterno.Size = new System.Drawing.Size(228, 21);
             this.TxtApellidoMaterno.SoloNumeros = false;
             this.TxtApellidoMaterno.TabIndex = 3;
-            this.TxtApellidoMaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtApellidoMaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtApellidoMaterno.Validar = true;
             // 
             // TxtCorreo
@@ -316,7 +322,7 @@
             this.TxtCorreo.Size = new System.Drawing.Size(288, 21);
             this.TxtCorreo.SoloNumeros = false;
             this.TxtCorreo.TabIndex = 11;
-            this.TxtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtCorreo.Validar = true;
             // 
             // TxtDomicilio
@@ -327,7 +333,7 @@
             this.TxtDomicilio.Size = new System.Drawing.Size(288, 21);
             this.TxtDomicilio.SoloNumeros = false;
             this.TxtDomicilio.TabIndex = 10;
-            this.TxtDomicilio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtDomicilio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtDomicilio.Validar = true;
             // 
             // TxtNss
@@ -338,7 +344,7 @@
             this.TxtNss.Size = new System.Drawing.Size(288, 21);
             this.TxtNss.SoloNumeros = true;
             this.TxtNss.TabIndex = 8;
-            this.TxtNss.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtNss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtNss.Validar = true;
             // 
             // TxtCurp
@@ -349,7 +355,7 @@
             this.TxtCurp.Size = new System.Drawing.Size(288, 21);
             this.TxtCurp.SoloNumeros = false;
             this.TxtCurp.TabIndex = 7;
-            this.TxtCurp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtCurp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtCurp.Validar = true;
             // 
             // TxtApellidoPaterno
@@ -360,7 +366,7 @@
             this.TxtApellidoPaterno.Size = new System.Drawing.Size(236, 21);
             this.TxtApellidoPaterno.SoloNumeros = false;
             this.TxtApellidoPaterno.TabIndex = 2;
-            this.TxtApellidoPaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtApellidoPaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtApellidoPaterno.Validar = true;
             // 
             // dataGridView1
@@ -459,7 +465,7 @@
             this.TxtTelefono.Size = new System.Drawing.Size(288, 21);
             this.TxtTelefono.SoloNumeros = true;
             this.TxtTelefono.TabIndex = 12;
-            this.TxtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtTelefono.Validar = true;
             // 
             // label14
@@ -487,15 +493,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.button1.Location = new System.Drawing.Point(190, 628);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 30);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "EDITAR EXISTENTE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnEditar.Location = new System.Drawing.Point(190, 628);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(161, 30);
+            this.btnEditar.TabIndex = 39;
+            this.btnEditar.Text = "EDITAR EXISTENTE";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -527,7 +534,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.CbEstatus);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.CbPuesto);
             this.Controls.Add(this.BtnQuitarCurso);
             this.Controls.Add(this.BtnAgregarCurso);
@@ -598,7 +605,7 @@
             this.Controls.SetChildIndex(this.CbPuesto, 0);
             this.Controls.SetChildIndex(this.BtnSalir, 0);
             this.Controls.SetChildIndex(this.BtnAgregar, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.CbEstatus, 0);
             this.Controls.SetChildIndex(this.label14, 0);
@@ -642,7 +649,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox CbEstatus;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Curso;

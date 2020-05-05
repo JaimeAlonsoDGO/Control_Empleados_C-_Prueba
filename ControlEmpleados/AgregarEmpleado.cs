@@ -128,5 +128,34 @@ namespace ControlEmpleados
             TxtTelefono.Text = "";
             TxtCorreo.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Creando oinstancia de vista ConsultarEmpleados
+            ConsultarEmpleados ConEmpl = new ConsultarEmpleados();
+            ConEmpl.ShowDialog();
+
+            //Almacenando ID del empleado, fecha de nacimienoto y estatus, en una variable, a partir de nuestra consulta realizada
+            string id_empleado = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim();
+            string estatus = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[13].Value.ToString().Trim();
+
+            //Asignando valores a nuestro formulario
+            TxtID.Text = id_empleado;
+            TxtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
+            TxtApellidoPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
+            TxtApellidoMaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Trim();
+            DtFechaNac.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[4].Value.ToString().Trim();
+            TxtEstadoCivil.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[5].Value.ToString().Trim();
+            TxtCurp.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[6].Value.ToString().Trim();
+            TxtRfc.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[7].Value.ToString().Trim();
+            TxtNss.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[8].Value.ToString().Trim();
+            TxtLugarNac.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[9].Value.ToString().Trim(); ;
+            TxtDomicilio.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[10].Value.ToString().Trim();
+            TxtTelefono.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[11].Value.ToString().Trim();
+            TxtCorreo.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[12].Value.ToString().Trim();
+            if (estatus == "True") { CbEstatus.Text = "Activo"; }
+            else { CbEstatus.Text = "Inactivo"; }
+
+        } // EditarExistente
     }
 }
