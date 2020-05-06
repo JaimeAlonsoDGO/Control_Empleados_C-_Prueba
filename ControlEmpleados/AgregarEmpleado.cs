@@ -104,7 +104,9 @@ namespace ControlEmpleados
                     //Ejecutando Proceso almacenado para guardar Foto
                     GuardarFoto(imagen, TxtID.Text.Trim());
                     MessageBox.Show("Guardado exitosamente.");
-                    
+                    LimpiarTxtBox(); //Limpiamos los txtbox
+                    dataGridView1.Columns.Clear(); //Limpiamos el DataGridView
+                    PbFoto.Image = null; //Limpiamos la foto                    
                 }//Try
                 catch (Exception error)
                 {
@@ -114,20 +116,11 @@ namespace ControlEmpleados
         }//BtnAgregar Empleado
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            TxtID.Text = "";
-            TxtNombre.Text = "";
-            TxtApellidoPaterno.Text = "";
-            TxtApellidoMaterno.Text = "";
-            TxtEstadoCivil.Text = "";
-            TxtLugarNac.Text = "";
-            TxtCurp.Text = "";
-            TxtNss.Text = "";
-            TxtRfc.Text = "";
-            TxtDomicilio.Text = "";
-            TxtTelefono.Text = "";
-            TxtCorreo.Text = "";
-        }
+        {      
+            LimpiarTxtBox();
+            dataGridView1.Columns.Clear(); //Limpiamos el DataGridView
+            PbFoto.Image = null; //Limpiamos la foto  
+        }//BtnNuevo
 
         private void button1_Click(object sender, EventArgs e)
         {

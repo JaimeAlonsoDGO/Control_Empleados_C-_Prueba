@@ -68,5 +68,14 @@ namespace ControlEmpleados
             DataSet ds = Utilidades.Ejecutar(cmd);
             return ds;
         }//BuscarFoto
+
+        public void LimpiarTxtBox()
+        {
+            foreach(Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(ErrorTxtBox))
+                    c.Text = "";
+            }//ForEach
+        }//LimpiarTxtBox
     }
 }
