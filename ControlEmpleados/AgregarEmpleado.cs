@@ -139,7 +139,7 @@ namespace ControlEmpleados
             string id_empleado = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim();
             string estatus = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[13].Value.ToString().Trim();
 
-            //Asignando valores a nuestro formulario
+            //Asignando valores a nuestro formulario DATOS GENERALES
             TxtID.Text = id_empleado;
             TxtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
             TxtApellidoPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
@@ -155,6 +155,19 @@ namespace ControlEmpleados
             TxtCorreo.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[12].Value.ToString().Trim();
             if (estatus == "True") { CbEstatus.Text = "Activo"; }
             else { CbEstatus.Text = "Inactivo"; }
+
+            //Asignando fotografía
+            DataSet ds = BuscarFoto(id_empleado.ToString().Trim()); //Obteniendo un DataSet con la posible ruta de la imagen, usando el proceso almacenado en nuestra BD
+
+            try
+            {
+                string urlFoto = ds.Tables[0].Rows[0][0].ToString().Trim();
+                PbFoto.Image = Image.FromFile(urlFoto);
+            }//TRY 
+            catch(Exception error)
+            {
+                MessageBox.Show("El empleado no tiene asignada una fotografía.");
+            }//catch
 
         } // EditarExistente
     }

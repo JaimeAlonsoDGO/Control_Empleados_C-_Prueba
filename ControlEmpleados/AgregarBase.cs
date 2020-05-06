@@ -61,5 +61,12 @@ namespace ControlEmpleados
 
             return true;
         }//GuardarFoto
+
+        public DataSet BuscarFoto (string id_empleado)
+        {
+            string cmd = string.Format("EXEC ConsultaFotoEmpleado '{0}'", id_empleado);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            return ds;
+        }//BuscarFoto
     }
 }

@@ -67,7 +67,7 @@
             this.CbEstatus = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).BeginInit();
@@ -86,7 +86,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(399, 7);
+            this.label1.Location = new System.Drawing.Point(454, 9);
             this.label1.Size = new System.Drawing.Size(206, 24);
             this.label1.Text = "Datos de Empleado";
             // 
@@ -290,7 +290,7 @@
             this.TxtRfc.SoloNumeros = false;
             this.TxtRfc.TabIndex = 9;
             this.TxtRfc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtRfc.Validar = true;
+            this.TxtRfc.Validar = false;
             // 
             // TxtEstadoCivil
             // 
@@ -345,7 +345,7 @@
             this.TxtNss.SoloNumeros = true;
             this.TxtNss.TabIndex = 8;
             this.TxtNss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtNss.Validar = true;
+            this.TxtNss.Validar = false;
             // 
             // TxtCurp
             // 
@@ -504,16 +504,16 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnNuevo
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.button2.Location = new System.Drawing.Point(13, 628);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 30);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "NUEVO";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnNuevo.Location = new System.Drawing.Point(13, 628);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(161, 30);
+            this.btnNuevo.TabIndex = 40;
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.button2_Click);
             // 
             // label16
             // 
@@ -533,7 +533,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.CbEstatus);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.CbPuesto);
             this.Controls.Add(this.BtnQuitarCurso);
@@ -606,7 +606,7 @@
             this.Controls.SetChildIndex(this.BtnSalir, 0);
             this.Controls.SetChildIndex(this.BtnAgregar, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.btnNuevo, 0);
             this.Controls.SetChildIndex(this.CbEstatus, 0);
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.label16, 0);
@@ -650,7 +650,7 @@
         private System.Windows.Forms.ComboBox CbEstatus;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Curso;
         public MiBiblioteca.ErrorTxtBox TxtLugarNac;
