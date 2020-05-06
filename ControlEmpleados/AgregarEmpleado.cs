@@ -162,6 +162,23 @@ namespace ControlEmpleados
                 MessageBox.Show("El empleado no tiene asignada una fotografía.");
             }//catch
 
+            //ASIGNANDO CURSOS A DATAGRIDVIEW
+            try
+            {
+                int control = 0;
+                ds = ObtenerCursos(id_empleado);
+                foreach (DataRow dr in ds.Tables[0].Rows) //Recorriendo cada renglon en el DataSet
+                {
+                    dataGridView1.Rows.Add(ds.Tables[0].Rows[control][0].ToString().Trim(), ds.Tables[0].Rows[control][1].ToString().Trim());
+                    control += 1;
+                }
+            }//try
+            catch(Exception error)
+            {
+                MessageBox.Show("El empleado aún no tiene cursos registrados");
+            }//Catch
+            
+
         } // EditarExistente
     }
 }

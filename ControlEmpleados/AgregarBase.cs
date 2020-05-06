@@ -69,6 +69,13 @@ namespace ControlEmpleados
             return ds;
         }//BuscarFoto
 
+        public DataSet ObtenerCursos(string idEmpleado)
+        {
+            string cmd = string.Format("EXEC ObtenerCursosEmpleado '{0}'", idEmpleado);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            return ds;
+        }//ObtenerCursos
+
         public void LimpiarTxtBox()
         {
             foreach(Control c in this.Controls)
@@ -77,5 +84,6 @@ namespace ControlEmpleados
                     c.Text = "";
             }//ForEach
         }//LimpiarTxtBox
+
     }
 }
