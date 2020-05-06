@@ -74,6 +74,12 @@ namespace ControlEmpleados
             return ds;
         }//ObtenerCursos
 
+        public void EliminarHistorialCursos(string empleado)
+        {
+            string cmd = string.Format("EXEC EliminarHistorialCursos '{0}'", empleado.ToString().Trim());
+            Utilidades.Ejecutar(cmd);
+        }//EliminarHistorialCursos
+
         public void GuardarHistorialCursos(string curso, string empleado)
         {
             string cmd = string.Format("EXEC GuardarHistorialCursos '{0}', '{1}'", curso.Trim(), empleado.Trim());

@@ -104,6 +104,7 @@ namespace ControlEmpleados
                     //Ejecutando Proceso almacenado para guardar Foto
                     GuardarFoto(imagen, TxtID.Text.Trim());
                     //Agregando los cursos
+                    EliminarHistorialCursos(TxtID.Text.ToString().Trim()); //Eliminando registros existentes de ese empleado, antes de agregar los cursos que se desean
                     con_fila = 0;
                     foreach (DataGridViewRow r in dataGridView1.Rows)
                     {
@@ -121,7 +122,7 @@ namespace ControlEmpleados
                     MessageBox.Show("ERROR: " + error.Message);
                 }//catch
             }//if                
-        }//BtnAgregar Empleado
+        }//BtnAgregar (Guardar) Empleado
 
         private void button2_Click(object sender, EventArgs e)
         {      
