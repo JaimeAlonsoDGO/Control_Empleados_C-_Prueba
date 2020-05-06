@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnImagen = new System.Windows.Forms.Button();
             this.BtnQuitar = new System.Windows.Forms.Button();
             this.PbFoto = new System.Windows.Forms.PictureBox();
@@ -69,16 +70,29 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.dgvPuestos = new System.Windows.Forms.DataGridView();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregarPuesto = new System.Windows.Forms.Button();
+            this.btnQuitarPuesto = new System.Windows.Forms.Button();
+            this.dgvIncidencias = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnQuitarIncidencia = new System.Windows.Forms.Button();
+            this.btnAgregarIncidencia = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.administraciónEmpleadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncidencias)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(367, 626);
+            this.BtnAgregar.Location = new System.Drawing.Point(695, 626);
             this.BtnAgregar.Size = new System.Drawing.Size(161, 32);
             this.BtnAgregar.TabIndex = 19;
             this.BtnAgregar.Text = "GUARDAR";
@@ -86,26 +100,26 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(454, 9);
+            this.label1.Location = new System.Drawing.Point(115, 10);
             this.label1.Size = new System.Drawing.Size(206, 24);
             this.label1.Text = "Datos de Empleado";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label2.Location = new System.Drawing.Point(360, 77);
+            this.label2.Location = new System.Drawing.Point(21, 78);
             this.label2.Size = new System.Drawing.Size(76, 18);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label3.Location = new System.Drawing.Point(360, 45);
+            this.label3.Location = new System.Drawing.Point(24, 46);
             this.label3.Size = new System.Drawing.Size(30, 18);
             // 
             // TxtID
             // 
             this.TxtID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtID.Location = new System.Drawing.Point(526, 42);
+            this.TxtID.Location = new System.Drawing.Point(187, 43);
             this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(220, 21);
             this.TxtID.SoloNumeros = false;
@@ -116,20 +130,20 @@
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtNombre.Location = new System.Drawing.Point(458, 74);
+            this.TxtNombre.Location = new System.Drawing.Point(119, 75);
             this.TxtNombre.Size = new System.Drawing.Size(288, 21);
             this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnSalir
             // 
-            this.BtnSalir.Location = new System.Drawing.Point(544, 626);
+            this.BtnSalir.Location = new System.Drawing.Point(982, 626);
             this.BtnSalir.Size = new System.Drawing.Size(161, 32);
             this.BtnSalir.TabIndex = 20;
             // 
             // BtnImagen
             // 
             this.BtnImagen.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnImagen.Location = new System.Drawing.Point(12, 241);
+            this.BtnImagen.Location = new System.Drawing.Point(471, 272);
             this.BtnImagen.Name = "BtnImagen";
             this.BtnImagen.Size = new System.Drawing.Size(125, 25);
             this.BtnImagen.TabIndex = 15;
@@ -140,7 +154,7 @@
             // BtnQuitar
             // 
             this.BtnQuitar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnQuitar.Location = new System.Drawing.Point(143, 241);
+            this.BtnQuitar.Location = new System.Drawing.Point(602, 272);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(125, 25);
             this.BtnQuitar.TabIndex = 16;
@@ -150,9 +164,10 @@
             // 
             // PbFoto
             // 
+            this.PbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PbFoto.ErrorImage = null;
             this.PbFoto.InitialImage = global::ControlEmpleados.Properties.Resources.user_add_12818;
-            this.PbFoto.Location = new System.Drawing.Point(12, 12);
+            this.PbFoto.Location = new System.Drawing.Point(471, 43);
             this.PbFoto.Name = "PbFoto";
             this.PbFoto.Size = new System.Drawing.Size(256, 215);
             this.PbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,7 +178,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(360, 111);
+            this.label4.Location = new System.Drawing.Point(21, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 18);
             this.label4.TabIndex = 9;
@@ -173,7 +188,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(360, 482);
+            this.label5.Location = new System.Drawing.Point(21, 483);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 18);
             this.label5.TabIndex = 10;
@@ -183,7 +198,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(360, 401);
+            this.label6.Location = new System.Drawing.Point(21, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 18);
             this.label6.TabIndex = 11;
@@ -193,7 +208,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(363, 241);
+            this.label7.Location = new System.Drawing.Point(21, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 18);
             this.label7.TabIndex = 12;
@@ -203,7 +218,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(363, 318);
+            this.label8.Location = new System.Drawing.Point(21, 319);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 18);
             this.label8.TabIndex = 13;
@@ -213,7 +228,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(363, 356);
+            this.label9.Location = new System.Drawing.Point(21, 357);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 18);
             this.label9.TabIndex = 14;
@@ -223,7 +238,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(363, 275);
+            this.label10.Location = new System.Drawing.Point(21, 275);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 18);
             this.label10.TabIndex = 15;
@@ -233,7 +248,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(363, 179);
+            this.label11.Location = new System.Drawing.Point(21, 180);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 18);
             this.label11.TabIndex = 16;
@@ -243,7 +258,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(360, 206);
+            this.label12.Location = new System.Drawing.Point(21, 207);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(181, 18);
             this.label12.TabIndex = 17;
@@ -253,7 +268,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(360, 143);
+            this.label13.Location = new System.Drawing.Point(21, 144);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(147, 18);
             this.label13.TabIndex = 18;
@@ -263,7 +278,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(360, 440);
+            this.label15.Location = new System.Drawing.Point(21, 441);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 18);
             this.label15.TabIndex = 20;
@@ -272,7 +287,7 @@
             // TxtLugarNac
             // 
             this.TxtLugarNac.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtLugarNac.Location = new System.Drawing.Point(549, 241);
+            this.TxtLugarNac.Location = new System.Drawing.Point(210, 242);
             this.TxtLugarNac.Name = "TxtLugarNac";
             this.TxtLugarNac.Size = new System.Drawing.Size(197, 21);
             this.TxtLugarNac.SoloNumeros = false;
@@ -283,7 +298,7 @@
             // TxtRfc
             // 
             this.TxtRfc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtRfc.Location = new System.Drawing.Point(458, 356);
+            this.TxtRfc.Location = new System.Drawing.Point(119, 357);
             this.TxtRfc.Name = "TxtRfc";
             this.TxtRfc.Size = new System.Drawing.Size(288, 21);
             this.TxtRfc.SoloNumeros = false;
@@ -294,7 +309,7 @@
             // TxtEstadoCivil
             // 
             this.TxtEstadoCivil.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtEstadoCivil.Location = new System.Drawing.Point(477, 176);
+            this.TxtEstadoCivil.Location = new System.Drawing.Point(138, 177);
             this.TxtEstadoCivil.Name = "TxtEstadoCivil";
             this.TxtEstadoCivil.Size = new System.Drawing.Size(269, 21);
             this.TxtEstadoCivil.SoloNumeros = false;
@@ -305,7 +320,7 @@
             // TxtApellidoMaterno
             // 
             this.TxtApellidoMaterno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtApellidoMaterno.Location = new System.Drawing.Point(518, 143);
+            this.TxtApellidoMaterno.Location = new System.Drawing.Point(179, 144);
             this.TxtApellidoMaterno.Name = "TxtApellidoMaterno";
             this.TxtApellidoMaterno.Size = new System.Drawing.Size(228, 21);
             this.TxtApellidoMaterno.SoloNumeros = false;
@@ -316,7 +331,7 @@
             // TxtCorreo
             // 
             this.TxtCorreo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtCorreo.Location = new System.Drawing.Point(458, 440);
+            this.TxtCorreo.Location = new System.Drawing.Point(119, 441);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(288, 21);
             this.TxtCorreo.SoloNumeros = false;
@@ -327,7 +342,7 @@
             // TxtDomicilio
             // 
             this.TxtDomicilio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtDomicilio.Location = new System.Drawing.Point(458, 401);
+            this.TxtDomicilio.Location = new System.Drawing.Point(119, 402);
             this.TxtDomicilio.Name = "TxtDomicilio";
             this.TxtDomicilio.Size = new System.Drawing.Size(288, 21);
             this.TxtDomicilio.SoloNumeros = false;
@@ -338,7 +353,7 @@
             // TxtNss
             // 
             this.TxtNss.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtNss.Location = new System.Drawing.Point(458, 318);
+            this.TxtNss.Location = new System.Drawing.Point(119, 319);
             this.TxtNss.Name = "TxtNss";
             this.TxtNss.Size = new System.Drawing.Size(288, 21);
             this.TxtNss.SoloNumeros = true;
@@ -349,7 +364,7 @@
             // TxtCurp
             // 
             this.TxtCurp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtCurp.Location = new System.Drawing.Point(458, 275);
+            this.TxtCurp.Location = new System.Drawing.Point(119, 276);
             this.TxtCurp.Name = "TxtCurp";
             this.TxtCurp.Size = new System.Drawing.Size(288, 21);
             this.TxtCurp.SoloNumeros = false;
@@ -360,7 +375,7 @@
             // TxtApellidoPaterno
             // 
             this.TxtApellidoPaterno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtApellidoPaterno.Location = new System.Drawing.Point(510, 111);
+            this.TxtApellidoPaterno.Location = new System.Drawing.Point(171, 112);
             this.TxtApellidoPaterno.Name = "TxtApellidoPaterno";
             this.TxtApellidoPaterno.Size = new System.Drawing.Size(236, 21);
             this.TxtApellidoPaterno.SoloNumeros = false;
@@ -379,7 +394,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Curso,
             this.Nombre_Curso});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 291);
+            this.dataGridView1.Location = new System.Drawing.Point(471, 321);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -402,7 +417,7 @@
             // BtnAgregarCurso
             // 
             this.BtnAgregarCurso.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.BtnAgregarCurso.Location = new System.Drawing.Point(12, 523);
+            this.BtnAgregarCurso.Location = new System.Drawing.Point(471, 553);
             this.BtnAgregarCurso.Name = "BtnAgregarCurso";
             this.BtnAgregarCurso.Size = new System.Drawing.Size(125, 27);
             this.BtnAgregarCurso.TabIndex = 17;
@@ -418,7 +433,7 @@
             // BtnQuitarCurso
             // 
             this.BtnQuitarCurso.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.BtnQuitarCurso.Location = new System.Drawing.Point(143, 523);
+            this.BtnQuitarCurso.Location = new System.Drawing.Point(602, 553);
             this.BtnQuitarCurso.Name = "BtnQuitarCurso";
             this.BtnQuitarCurso.Size = new System.Drawing.Size(125, 27);
             this.BtnQuitarCurso.TabIndex = 18;
@@ -440,7 +455,7 @@
             this.CbPuesto.DataSource = this.puestoBindingSource;
             this.CbPuesto.DisplayMember = "Nombre_Puesto";
             this.CbPuesto.FormattingEnabled = true;
-            this.CbPuesto.Location = new System.Drawing.Point(496, 561);
+            this.CbPuesto.Location = new System.Drawing.Point(157, 562);
             this.CbPuesto.Name = "CbPuesto";
             this.CbPuesto.Size = new System.Drawing.Size(250, 21);
             this.CbPuesto.TabIndex = 14;
@@ -450,7 +465,7 @@
             // 
             this.DtFechaNac.CustomFormat = "yyyy/mm/dd";
             this.DtFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtFechaNac.Location = new System.Drawing.Point(644, 204);
+            this.DtFechaNac.Location = new System.Drawing.Point(305, 205);
             this.DtFechaNac.Name = "DtFechaNac";
             this.DtFechaNac.Size = new System.Drawing.Size(102, 20);
             this.DtFechaNac.TabIndex = 5;
@@ -459,7 +474,7 @@
             // TxtTelefono
             // 
             this.TxtTelefono.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.TxtTelefono.Location = new System.Drawing.Point(458, 482);
+            this.TxtTelefono.Location = new System.Drawing.Point(119, 483);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(288, 21);
             this.TxtTelefono.SoloNumeros = true;
@@ -471,7 +486,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(363, 564);
+            this.label14.Location = new System.Drawing.Point(21, 562);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 18);
             this.label14.TabIndex = 37;
@@ -483,7 +498,7 @@
             this.CbEstatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.CbEstatus.Location = new System.Drawing.Point(458, 525);
+            this.CbEstatus.Location = new System.Drawing.Point(119, 526);
             this.CbEstatus.Name = "CbEstatus";
             this.CbEstatus.Size = new System.Drawing.Size(288, 21);
             this.CbEstatus.TabIndex = 13;
@@ -495,7 +510,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnEditar.Location = new System.Drawing.Point(190, 628);
+            this.btnEditar.Location = new System.Drawing.Point(334, 628);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(161, 30);
             this.btnEditar.TabIndex = 39;
@@ -506,7 +521,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.btnNuevo.Location = new System.Drawing.Point(13, 628);
+            this.btnNuevo.Location = new System.Drawing.Point(157, 628);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(161, 30);
             this.btnNuevo.TabIndex = 40;
@@ -518,17 +533,136 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(363, 528);
+            this.label16.Location = new System.Drawing.Point(21, 526);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 18);
             this.label16.TabIndex = 41;
             this.label16.Text = "Estatus:";
             // 
+            // dgvPuestos
+            // 
+            this.dgvPuestos.AllowUserToAddRows = false;
+            this.dgvPuestos.AllowUserToDeleteRows = false;
+            this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuestos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FechaInicio,
+            this.Puesto});
+            this.dgvPuestos.Location = new System.Drawing.Point(779, 43);
+            this.dgvPuestos.Name = "dgvPuestos";
+            this.dgvPuestos.ReadOnly = true;
+            this.dgvPuestos.RowHeadersVisible = false;
+            this.dgvPuestos.Size = new System.Drawing.Size(360, 215);
+            this.dgvPuestos.TabIndex = 42;
+            // 
+            // FechaInicio
+            // 
+            dataGridViewCellStyle2.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FechaInicio.HeaderText = "ID";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Puesto
+            // 
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.Name = "Puesto";
+            this.Puesto.ReadOnly = true;
+            this.Puesto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Puesto.Width = 530;
+            // 
+            // btnAgregarPuesto
+            // 
+            this.btnAgregarPuesto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPuesto.Location = new System.Drawing.Point(834, 272);
+            this.btnAgregarPuesto.Name = "btnAgregarPuesto";
+            this.btnAgregarPuesto.Size = new System.Drawing.Size(125, 25);
+            this.btnAgregarPuesto.TabIndex = 43;
+            this.btnAgregarPuesto.Text = "Agregar Puesto";
+            this.btnAgregarPuesto.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitarPuesto
+            // 
+            this.btnQuitarPuesto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarPuesto.Location = new System.Drawing.Point(982, 272);
+            this.btnQuitarPuesto.Name = "btnQuitarPuesto";
+            this.btnQuitarPuesto.Size = new System.Drawing.Size(125, 25);
+            this.btnQuitarPuesto.TabIndex = 44;
+            this.btnQuitarPuesto.Text = "Quitar Puesto";
+            this.btnQuitarPuesto.UseVisualStyleBackColor = true;
+            // 
+            // dgvIncidencias
+            // 
+            this.dgvIncidencias.AllowUserToAddRows = false;
+            this.dgvIncidencias.AllowUserToDeleteRows = false;
+            this.dgvIncidencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIncidencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.ConceptoIncidencia});
+            this.dgvIncidencias.Location = new System.Drawing.Point(779, 319);
+            this.dgvIncidencias.Name = "dgvIncidencias";
+            this.dgvIncidencias.ReadOnly = true;
+            this.dgvIncidencias.RowHeadersVisible = false;
+            this.dgvIncidencias.Size = new System.Drawing.Size(360, 228);
+            this.dgvIncidencias.TabIndex = 45;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ConceptoIncidencia
+            // 
+            this.ConceptoIncidencia.HeaderText = "Concepto de la incidencia";
+            this.ConceptoIncidencia.Name = "ConceptoIncidencia";
+            this.ConceptoIncidencia.ReadOnly = true;
+            this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ConceptoIncidencia.Width = 530;
+            // 
+            // btnQuitarIncidencia
+            // 
+            this.btnQuitarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarIncidencia.Location = new System.Drawing.Point(982, 560);
+            this.btnQuitarIncidencia.Name = "btnQuitarIncidencia";
+            this.btnQuitarIncidencia.Size = new System.Drawing.Size(125, 25);
+            this.btnQuitarIncidencia.TabIndex = 47;
+            this.btnQuitarIncidencia.Text = "Quitar Incidencia";
+            this.btnQuitarIncidencia.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarIncidencia
+            // 
+            this.btnAgregarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarIncidencia.Location = new System.Drawing.Point(834, 560);
+            this.btnAgregarIncidencia.Name = "btnAgregarIncidencia";
+            this.btnAgregarIncidencia.Size = new System.Drawing.Size(125, 25);
+            this.btnAgregarIncidencia.TabIndex = 46;
+            this.btnAgregarIncidencia.Text = "Agregar Incidencia";
+            this.btnAgregarIncidencia.UseVisualStyleBackColor = true;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnImprimir.Location = new System.Drawing.Point(514, 627);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(161, 30);
+            this.btnImprimir.TabIndex = 48;
+            this.btnImprimir.Text = "IMPRIMIR REPORTE";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 671);
+            this.ClientSize = new System.Drawing.Size(1175, 671);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnQuitarIncidencia);
+            this.Controls.Add(this.btnAgregarIncidencia);
+            this.Controls.Add(this.dgvIncidencias);
+            this.Controls.Add(this.btnQuitarPuesto);
+            this.Controls.Add(this.btnAgregarPuesto);
+            this.Controls.Add(this.dgvPuestos);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.CbEstatus);
@@ -563,10 +697,10 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.PbFoto);
-            this.MaximumSize = new System.Drawing.Size(802, 710);
-            this.MinimumSize = new System.Drawing.Size(802, 710);
+            this.MaximumSize = new System.Drawing.Size(1191, 710);
+            this.MinimumSize = new System.Drawing.Size(1191, 710);
             this.Name = "AgregarEmpleado";
-            this.Text = "AgregarEmpleado";
+            this.Text = "Edición de Empleado";
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             this.Controls.SetChildIndex(this.PbFoto, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -609,11 +743,20 @@
             this.Controls.SetChildIndex(this.CbEstatus, 0);
             this.Controls.SetChildIndex(this.label14, 0);
             this.Controls.SetChildIndex(this.label16, 0);
+            this.Controls.SetChildIndex(this.dgvPuestos, 0);
+            this.Controls.SetChildIndex(this.btnAgregarPuesto, 0);
+            this.Controls.SetChildIndex(this.btnQuitarPuesto, 0);
+            this.Controls.SetChildIndex(this.dgvIncidencias, 0);
+            this.Controls.SetChildIndex(this.btnAgregarIncidencia, 0);
+            this.Controls.SetChildIndex(this.btnQuitarIncidencia, 0);
+            this.Controls.SetChildIndex(this.btnImprimir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.administraciónEmpleadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncidencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,5 +804,16 @@
         public MiBiblioteca.ErrorTxtBox TxtApellidoPaterno;
         public MiBiblioteca.ErrorTxtBox TxtTelefono;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridView dgvPuestos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
+        private System.Windows.Forms.Button btnAgregarPuesto;
+        private System.Windows.Forms.Button btnQuitarPuesto;
+        private System.Windows.Forms.DataGridView dgvIncidencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoIncidencia;
+        private System.Windows.Forms.Button btnQuitarIncidencia;
+        private System.Windows.Forms.Button btnAgregarIncidencia;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }
