@@ -103,10 +103,18 @@ namespace ControlEmpleados
                     GuardarPersonalesEmpleado(TxtID.Text.Trim(), TxtNombre.Text.Trim(), TxtApellidoPaterno.Text.Trim(), TxtApellidoMaterno.Text.Trim(), fecha, TxtEstadoCivil.Text.Trim(), TxtCurp.Text.Trim(), TxtRfc.Text.Trim(), TxtNss.Text.Trim(), TxtLugarNac.Text.Trim(), TxtDomicilio.Text.Trim(), TxtTelefono.Text.Trim(), TxtCorreo.Text.Trim(), estatus.ToString().Trim());
                     //Ejecutando Proceso almacenado para guardar Foto
                     GuardarFoto(imagen, TxtID.Text.Trim());
+                    //Agregando los cursos
+                    con_fila = 0;
+                    foreach (DataGridViewRow r in dataGridView1.Rows)
+                    {
+                        GuardarHistorialCursos(dataGridView1.Rows[con_fila].Cells[0].Value.ToString().Trim(), TxtID.Text.ToString().Trim());                     
+                        con_fila += 1;
+                    }//ForEach
                     MessageBox.Show("Guardado exitosamente.");
                     LimpiarTxtBox(); //Limpiamos los txtbox
-                    dataGridView1.Columns.Clear(); //Limpiamos el DataGridView
-                    PbFoto.Image = null; //Limpiamos la foto                    
+                    dataGridView1.Rows.Clear(); //Limpiamos el DataGridView
+                    PbFoto.Image = null; //Limpiamos la foto
+                    con_fila = 0;
                 }//Try
                 catch (Exception error)
                 {
@@ -126,7 +134,7 @@ namespace ControlEmpleados
         {
             // Creando oinstancia de vista ConsultarEmpleados
             ConsultarEmpleados ConEmpl = new ConsultarEmpleados();
-            ConEmpl.ShowDialog();
+            ConEmpl.ShowDialog();       
 
             //Almacenando ID del empleado, fecha de nacimienoto y estatus, en una variable, a partir de nuestra consulta realizada
             string id_empleado = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim();
@@ -134,6 +142,7 @@ namespace ControlEmpleados
 
             //Asignando valores a nuestro formulario DATOS GENERALES
             TxtID.Text = id_empleado;
+            
             TxtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
             TxtApellidoPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
             TxtApellidoMaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Trim();
@@ -154,8 +163,8 @@ namespace ControlEmpleados
 
             try
             {
-                string urlFoto = ds.Tables[0].Rows[0][0].ToString().Trim();
-                PbFoto.Image = Image.FromFile(urlFoto);
+                imagen = ds.Tables[0].Rows[0][0].ToString().Trim();
+                PbFoto.Image = Image.FromFile(imagen);
             }//TRY 
             catch(Exception error)
             {
@@ -165,17 +174,17 @@ namespace ControlEmpleados
             //ASIGNANDO CURSOS A DATAGRIDVIEW
             try
             {
-                int control = 0;
+                con_fila = 0;
                 ds = ObtenerCursos(id_empleado);
                 foreach (DataRow dr in ds.Tables[0].Rows) //Recorriendo cada renglon en el DataSet
                 {
-                    dataGridView1.Rows.Add(ds.Tables[0].Rows[control][0].ToString().Trim(), ds.Tables[0].Rows[control][1].ToString().Trim());
-                    control += 1;
+                    dataGridView1.Rows.Add(ds.Tables[0].Rows[con_fila][0].ToString().Trim(), ds.Tables[0].Rows[con_fila][1].ToString().Trim());
+                    con_fila += 1;
                 }
             }//try
             catch(Exception error)
             {
-                MessageBox.Show("El empleado aún no tiene cursos registrados");
+                MessageBox.Show("El empleado aún no tiene cursos registrados \n");
             }//Catch
             
 

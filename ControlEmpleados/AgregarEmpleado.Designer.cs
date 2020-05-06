@@ -109,7 +109,6 @@
             this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(220, 21);
             this.TxtID.SoloNumeros = false;
-            this.TxtID.TabIndex = 99;
             this.TxtID.TabStop = false;
             this.TxtID.Tag = "El ID se definirá automáticamente.";
             this.TxtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

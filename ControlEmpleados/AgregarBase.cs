@@ -29,7 +29,7 @@ namespace ControlEmpleados
             errorProvider1.Clear();
         }
 
-        public Boolean NuevoRegistro (string proceso, string id, string nombre)
+        public void NuevoRegistro (string proceso, string id, string nombre)
         {
             if (Utilidades.ValidarFormulario(this, errorProvider1) == false)
             {
@@ -40,10 +40,9 @@ namespace ControlEmpleados
                 TxtID.Text = "";
                 TxtNombre.Text = "";
             }
-            return true;
         }//NuevoRegistro
 
-        public Boolean GuardarPersonalesEmpleado (string id, string nombre, string paterno, string materno,string fecha, string civil, string curp, string rfc, string nss, string lugar, string domicilio, string telefono, string correo, string estatus )
+        public void GuardarPersonalesEmpleado (string id, string nombre, string paterno, string materno,string fecha, string civil, string curp, string rfc, string nss, string lugar, string domicilio, string telefono, string correo, string estatus )
         {
             if (Utilidades.ValidarFormulario(this, errorProvider1) == false)
             {
@@ -51,7 +50,6 @@ namespace ControlEmpleados
                 string cmd = string.Format("EXEC Guardar_Datos_Empleado '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}'", id, nombre, paterno, materno, fecha, civil, curp, rfc, nss, lugar, domicilio, telefono, correo, estatus);
                 Utilidades.Ejecutar(cmd);
             }//IF
-            return true;
         }//GuardarPersonalesEmpleado
 
         public Boolean GuardarFoto (string urlFoto, string ID_Empleado) //Metodo para insertar la foto a la BD
@@ -75,6 +73,12 @@ namespace ControlEmpleados
             DataSet ds = Utilidades.Ejecutar(cmd);
             return ds;
         }//ObtenerCursos
+
+        public void GuardarHistorialCursos(string curso, string empleado)
+        {
+            string cmd = string.Format("EXEC GuardarHistorialCursos '{0}', '{1}'", curso.Trim(), empleado.Trim());
+            Utilidades.Ejecutar(cmd);
+        }//GuardarHistorialCursos
 
         public void LimpiarTxtBox()
         {
