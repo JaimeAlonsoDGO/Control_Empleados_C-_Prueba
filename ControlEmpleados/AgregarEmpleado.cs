@@ -53,38 +53,13 @@ namespace ControlEmpleados
 
         private void BtnAgregarCurso_Click(object sender, EventArgs e)
         {
-            Boolean existe = false;
             ConsultarCursos ConCur = new ConsultarCursos(); //Creando instancia de Ventana Consultar Cursos
-            ConCur.ShowDialog(); //Indicando que es una ventana de tipo Dialogo
-            string ID_Curso = ConCur.dataGridView1.Rows[ConCur.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim(); //Almacenando el ID btenido de la seleccion
-            string Nombre_Curso = ConCur.dataGridView1.Rows[ConCur.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim(); //ahora almacenando nombre de ccurso
-            if (con_fila != 0) //Validndo si no hay registros
-            {
-                foreach (DataGridViewRow fila in dataGridView1.Rows) //recorriendo cada fila en el DataGridView
-                {
-                    if (fila.Cells[0].Value.ToString() == ID_Curso)
-                    {
-                        MessageBox.Show("Ya se ha ingresado el curso " + Nombre_Curso + " anteriormente.");
-                        existe = true;
-                        break;
-                    }
-                }//ForEach
-            }//IF               
-            if(existe == false)
-            {
-                dataGridView1.Rows.Add(ID_Curso.Trim(), Nombre_Curso.Trim()); //Añadiendo valores al DataGridView
-                BtnAgregar.Focus(); //Haciendo focus en el boton para agregar un curso nuevo
-                con_fila++;
-            }//If
+            AgregarElementosDGV(ConCur, dataGridView1);
         }//BtnAgregarCursos Clic
 
         private void BtnQuitarCurso_Click(object sender, EventArgs e)
         {
-            if (con_fila > 0) //Validamos que ya existan registros
-            {
-                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index); //Eliminamos la selección actual
-                con_fila--; //Disminuimos el contador de filas
-            }
+            EliminarElementosDGV(dataGridView1);
         }//BtnQuitar Curso Clic
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -190,5 +165,16 @@ namespace ControlEmpleados
             
 
         } // EditarExistente
+
+        private void btnAgregarPuesto_Click(object sender, EventArgs e)
+        {
+            ConsultarPuestos ConPue = new ConsultarPuestos();
+            AgregarElementosDGV(ConPue, dgvPuestos);
+        }//btnAgregarPuesto CLIC
+
+        private void btnQuitarPuesto_Click(object sender, EventArgs e)
+        {
+            EliminarElementosDGV(dgvPuestos); //Método heredado de AgregarBase
+        }//btnQuitarPuesto CLIC
     }
 }

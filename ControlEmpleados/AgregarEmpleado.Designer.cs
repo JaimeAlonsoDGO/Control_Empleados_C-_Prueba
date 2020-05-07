@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnImagen = new System.Windows.Forms.Button();
             this.BtnQuitar = new System.Windows.Forms.Button();
             this.PbFoto = new System.Windows.Forms.PictureBox();
@@ -551,13 +551,14 @@
             this.dgvPuestos.Name = "dgvPuestos";
             this.dgvPuestos.ReadOnly = true;
             this.dgvPuestos.RowHeadersVisible = false;
+            this.dgvPuestos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPuestos.Size = new System.Drawing.Size(360, 215);
             this.dgvPuestos.TabIndex = 42;
             // 
             // FechaInicio
             // 
-            dataGridViewCellStyle2.NullValue = null;
-            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle1;
             this.FechaInicio.HeaderText = "ID";
             this.FechaInicio.Name = "FechaInicio";
             this.FechaInicio.ReadOnly = true;
@@ -580,6 +581,7 @@
             this.btnAgregarPuesto.TabIndex = 43;
             this.btnAgregarPuesto.Text = "Agregar Puesto";
             this.btnAgregarPuesto.UseVisualStyleBackColor = true;
+            this.btnAgregarPuesto.Click += new System.EventHandler(this.btnAgregarPuesto_Click);
             // 
             // btnQuitarPuesto
             // 
@@ -590,6 +592,7 @@
             this.btnQuitarPuesto.TabIndex = 44;
             this.btnQuitarPuesto.Text = "Quitar Puesto";
             this.btnQuitarPuesto.UseVisualStyleBackColor = true;
+            this.btnQuitarPuesto.Click += new System.EventHandler(this.btnQuitarPuesto_Click);
             // 
             // dgvIncidencias
             // 
