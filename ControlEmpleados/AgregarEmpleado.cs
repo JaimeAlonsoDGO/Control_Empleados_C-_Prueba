@@ -86,9 +86,18 @@ namespace ControlEmpleados
                         GuardarHistorialCursos(dataGridView1.Rows[con_fila].Cells[0].Value.ToString().Trim(), TxtID.Text.ToString().Trim());                     
                         con_fila += 1;
                     }//ForEach
+                    //Agregando los puestos
+                    EliminarHistorialPuestos(TxtID.Text.ToString().Trim()); //Eliminando registros existentes de ese empleado, antes de agregar los cursos que se desean
+                    con_fila = 0;
+                    foreach (DataGridViewRow r in dgvPuestos.Rows)
+                    {
+                        GuardarHistorialPuestos(dgvPuestos.Rows[con_fila].Cells[0].Value.ToString().Trim(), TxtID.Text.ToString().Trim());
+                        con_fila += 1;
+                    }//ForEach
                     MessageBox.Show("Guardado exitosamente.");
                     LimpiarTxtBox(); //Limpiamos los txtbox
-                    dataGridView1.Rows.Clear(); //Limpiamos el DataGridView
+                    dataGridView1.Rows.Clear(); //Limpiamos el DataGridView de Cursos
+                    dgvPuestos.Rows.Clear(); //Limpiamos el DataGridView de Puestos
                     PbFoto.Image = null; //Limpiamos la foto
                     con_fila = 0;
                 }//Try
@@ -162,7 +171,23 @@ namespace ControlEmpleados
             {
                 MessageBox.Show("El empleado aún no tiene cursos registrados \n");
             }//Catch
-            
+
+            //ASIGNANDO PUESTOS A DATAGRIDVIEW
+            try
+            {
+                con_fila = 0;
+                ds = ObtenerPuestos(id_empleado);
+                foreach (DataRow dr in ds.Tables[0].Rows) //Recorriendo cada renglon en el DataSet
+                {
+                    dgvPuestos.Rows.Add(ds.Tables[0].Rows[con_fila][0].ToString().Trim(), ds.Tables[0].Rows[con_fila][1].ToString().Trim());
+                    con_fila += 1;
+                }
+            }//try
+            catch (Exception error)
+            {
+                MessageBox.Show("El empleado aún no tiene puestos registrados \n");
+            }//Catch
+
 
         } // EditarExistente
 

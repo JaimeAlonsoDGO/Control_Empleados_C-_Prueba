@@ -71,16 +71,16 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarPuesto = new System.Windows.Forms.Button();
             this.btnQuitarPuesto = new System.Windows.Forms.Button();
             this.dgvIncidencias = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarIncidencia = new System.Windows.Forms.Button();
             this.btnAgregarIncidencia = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -555,23 +555,6 @@
             this.dgvPuestos.Size = new System.Drawing.Size(360, 215);
             this.dgvPuestos.TabIndex = 42;
             // 
-            // FechaInicio
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle1;
-            this.FechaInicio.HeaderText = "ID";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
-            this.Puesto.ReadOnly = true;
-            this.Puesto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Puesto.Width = 530;
-            // 
             // btnAgregarPuesto
             // 
             this.btnAgregarPuesto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -609,25 +592,10 @@
             this.dgvIncidencias.Size = new System.Drawing.Size(360, 228);
             this.dgvIncidencias.TabIndex = 45;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ConceptoIncidencia
-            // 
-            this.ConceptoIncidencia.HeaderText = "Concepto de la incidencia";
-            this.ConceptoIncidencia.Name = "ConceptoIncidencia";
-            this.ConceptoIncidencia.ReadOnly = true;
-            this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ConceptoIncidencia.Width = 530;
-            // 
             // btnQuitarIncidencia
             // 
             this.btnQuitarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarIncidencia.Location = new System.Drawing.Point(982, 560);
+            this.btnQuitarIncidencia.Location = new System.Drawing.Point(982, 553);
             this.btnQuitarIncidencia.Name = "btnQuitarIncidencia";
             this.btnQuitarIncidencia.Size = new System.Drawing.Size(125, 25);
             this.btnQuitarIncidencia.TabIndex = 47;
@@ -637,7 +605,7 @@
             // btnAgregarIncidencia
             // 
             this.btnAgregarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarIncidencia.Location = new System.Drawing.Point(834, 560);
+            this.btnAgregarIncidencia.Location = new System.Drawing.Point(834, 553);
             this.btnAgregarIncidencia.Name = "btnAgregarIncidencia";
             this.btnAgregarIncidencia.Size = new System.Drawing.Size(125, 25);
             this.btnAgregarIncidencia.TabIndex = 46;
@@ -653,6 +621,40 @@
             this.btnImprimir.TabIndex = 48;
             this.btnImprimir.Text = "IMPRIMIR REPORTE";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 50;
+            // 
+            // ConceptoIncidencia
+            // 
+            this.ConceptoIncidencia.HeaderText = "Concepto de la incidencia";
+            this.ConceptoIncidencia.Name = "ConceptoIncidencia";
+            this.ConceptoIncidencia.ReadOnly = true;
+            this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ConceptoIncidencia.Width = 310;
+            // 
+            // FechaInicio
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle1;
+            this.FechaInicio.HeaderText = "ID";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FechaInicio.Width = 50;
+            // 
+            // Puesto
+            // 
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.Name = "Puesto";
+            this.Puesto.ReadOnly = true;
+            this.Puesto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Puesto.Width = 310;
             // 
             // AgregarEmpleado
             // 
@@ -808,15 +810,15 @@
         public MiBiblioteca.ErrorTxtBox TxtTelefono;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dgvPuestos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
         private System.Windows.Forms.Button btnAgregarPuesto;
         private System.Windows.Forms.Button btnQuitarPuesto;
         private System.Windows.Forms.DataGridView dgvIncidencias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoIncidencia;
         private System.Windows.Forms.Button btnQuitarIncidencia;
         private System.Windows.Forms.Button btnAgregarIncidencia;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoIncidencia;
     }
 }

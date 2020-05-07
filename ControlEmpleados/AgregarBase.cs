@@ -87,6 +87,25 @@ namespace ControlEmpleados
             Utilidades.Ejecutar(cmd);
         }//GuardarHistorialCursos
 
+        public void EliminarHistorialPuestos(string empleado)
+        {
+            string cmd = string.Format("EXEC EliminarHistorialPuestos '{0}'", empleado);
+            Utilidades.Ejecutar(cmd);
+        }//EliminarHistorialPuestos
+
+        public void GuardarHistorialPuestos(string puesto, string empleado)
+        {
+            string cmd = string.Format("EXEC GuardarHistorialPuestos '{0}', '{1}'", puesto, empleado);
+            Utilidades.Ejecutar(cmd);
+        }//GuardarHistorialPuestos
+
+        public DataSet ObtenerPuestos(string idEmpleado)
+        {
+            string cmd = string.Format("EXEC ObtenerPuestosEmpleado '{0}'", idEmpleado);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            return ds;
+        }//ObtenerPuestos
+
         public void AgregarElementosDGV(Consultas ConCur, DataGridView dataGridView1)
         {
             //Recibe como argumentos una ventana de tipo consulta y un datagridview
