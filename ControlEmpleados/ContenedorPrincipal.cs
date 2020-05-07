@@ -65,5 +65,20 @@ namespace ControlEmpleados
             AgPuesto.MdiParent = this;
             AgPuesto.Show();
         }
+
+        private void crearEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarEmpleado AgEmpleado = new AgregarEmpleado();
+            AgEmpleado.MdiParent = this;
+            AgEmpleado.Show();
+        }
+
+        private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarEmpleado AgEmpleado = new AgregarEmpleado();
+            AgEmpleado.MdiParent = this;
+            AgEmpleado.Show();
+            AgEmpleado.button1_Click(this, null);
+        }
     }
 }

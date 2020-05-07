@@ -42,6 +42,7 @@
             this.puestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirPuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,8 @@
             this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearEmpleadoToolStripMenuItem,
             this.consultarEmpleadosToolStripMenuItem,
-            this.editarEmpleadoToolStripMenuItem});
+            this.editarEmpleadoToolStripMenuItem,
+            this.eliminarEmpleadoToolStripMenuItem});
             this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
             this.accionesToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.accionesToolStripMenuItem.Text = "Empleados";
@@ -89,6 +91,7 @@
             this.crearEmpleadoToolStripMenuItem.Name = "crearEmpleadoToolStripMenuItem";
             this.crearEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.crearEmpleadoToolStripMenuItem.Text = "Crear Empleado";
+            this.crearEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.crearEmpleadoToolStripMenuItem_Click);
             // 
             // consultarEmpleadosToolStripMenuItem
             // 
@@ -102,6 +105,7 @@
             this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
             this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.editarEmpleadoToolStripMenuItem.Text = "Editar Empleado";
+            this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click);
             // 
             // cursosToolStripMenuItem
             // 
@@ -138,16 +142,22 @@
             // añadirPuestoToolStripMenuItem
             // 
             this.añadirPuestoToolStripMenuItem.Name = "añadirPuestoToolStripMenuItem";
-            this.añadirPuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirPuestoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.añadirPuestoToolStripMenuItem.Text = "Añadir Puesto";
             this.añadirPuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPuestoToolStripMenuItem_Click);
             // 
             // consultarPuestosToolStripMenuItem
             // 
             this.consultarPuestosToolStripMenuItem.Name = "consultarPuestosToolStripMenuItem";
-            this.consultarPuestosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarPuestosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.consultarPuestosToolStripMenuItem.Text = "Consultar Puestos";
             this.consultarPuestosToolStripMenuItem.Click += new System.EventHandler(this.consultarPuestosToolStripMenuItem_Click);
+            // 
+            // eliminarEmpleadoToolStripMenuItem
+            // 
+            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
+            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
             // 
             // ContenedorPrincipal
             // 
@@ -184,5 +194,6 @@
         private System.Windows.Forms.ToolStripMenuItem puestosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirPuestoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarPuestosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarEmpleadoToolStripMenuItem;
     }
 }

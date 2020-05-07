@@ -115,7 +115,7 @@ namespace ControlEmpleados
             PbFoto.Image = null; //Limpiamos la foto  
         }//BtnNuevo
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             // Creando oinstancia de vista ConsultarEmpleados
             ConsultarEmpleados ConEmpl = new ConsultarEmpleados();
@@ -217,6 +217,6 @@ namespace ControlEmpleados
             }//foreach
 
             TxtID.Text = clave;
-        }
+        }//Se genera el ID de empleado a partir de la CURP
     }
 }

@@ -797,7 +797,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox CbEstatus;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Curso;
@@ -821,5 +820,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConceptoIncidencia;
+        public System.Windows.Forms.Button btnEditar;
     }
 }
