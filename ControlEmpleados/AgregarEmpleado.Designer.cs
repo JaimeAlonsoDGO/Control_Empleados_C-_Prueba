@@ -71,16 +71,16 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarPuesto = new System.Windows.Forms.Button();
             this.btnQuitarPuesto = new System.Windows.Forms.Button();
             this.dgvIncidencias = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarIncidencia = new System.Windows.Forms.Button();
             this.btnAgregarIncidencia = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -371,6 +371,7 @@
             this.TxtCurp.TabIndex = 7;
             this.TxtCurp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtCurp.Validar = true;
+            this.TxtCurp.TextChanged += new System.EventHandler(this.TxtCurp_TextChanged);
             // 
             // TxtApellidoPaterno
             // 
@@ -555,6 +556,24 @@
             this.dgvPuestos.Size = new System.Drawing.Size(360, 215);
             this.dgvPuestos.TabIndex = 42;
             // 
+            // FechaInicio
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle1;
+            this.FechaInicio.HeaderText = "ID";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FechaInicio.Width = 50;
+            // 
+            // Puesto
+            // 
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.Name = "Puesto";
+            this.Puesto.ReadOnly = true;
+            this.Puesto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Puesto.Width = 310;
+            // 
             // btnAgregarPuesto
             // 
             this.btnAgregarPuesto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -592,6 +611,22 @@
             this.dgvIncidencias.Size = new System.Drawing.Size(360, 228);
             this.dgvIncidencias.TabIndex = 45;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 50;
+            // 
+            // ConceptoIncidencia
+            // 
+            this.ConceptoIncidencia.HeaderText = "Concepto de la incidencia";
+            this.ConceptoIncidencia.Name = "ConceptoIncidencia";
+            this.ConceptoIncidencia.ReadOnly = true;
+            this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ConceptoIncidencia.Width = 310;
+            // 
             // btnQuitarIncidencia
             // 
             this.btnQuitarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -621,40 +656,6 @@
             this.btnImprimir.TabIndex = 48;
             this.btnImprimir.Text = "IMPRIMIR REPORTE";
             this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 50;
-            // 
-            // ConceptoIncidencia
-            // 
-            this.ConceptoIncidencia.HeaderText = "Concepto de la incidencia";
-            this.ConceptoIncidencia.Name = "ConceptoIncidencia";
-            this.ConceptoIncidencia.ReadOnly = true;
-            this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ConceptoIncidencia.Width = 310;
-            // 
-            // FechaInicio
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.FechaInicio.DefaultCellStyle = dataGridViewCellStyle1;
-            this.FechaInicio.HeaderText = "ID";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FechaInicio.Width = 50;
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
-            this.Puesto.ReadOnly = true;
-            this.Puesto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Puesto.Width = 310;
             // 
             // AgregarEmpleado
             // 

@@ -201,5 +201,22 @@ namespace ControlEmpleados
         {
             EliminarElementosDGV(dgvPuestos); //Método heredado de AgregarBase
         }//btnQuitarPuesto CLIC
+
+        private void TxtCurp_TextChanged(object sender, EventArgs e)
+        {
+            string clave = "";
+            con_fila = 0;
+
+            foreach (char c in TxtCurp.Text.ToString().Trim())
+            {
+                if (con_fila < 10)
+                {
+                    clave = clave + c;
+                    con_fila += 1;
+                }
+            }//foreach
+
+            TxtID.Text = clave;
+        }
     }
 }
