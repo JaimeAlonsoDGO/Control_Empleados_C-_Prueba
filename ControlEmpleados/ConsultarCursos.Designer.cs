@@ -66,7 +66,7 @@
             this.ClientSize = new System.Drawing.Size(796, 540);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarCursos";
-            this.Text = "ConsultarCursos";
+            this.Text = "Cursos Registrados";
             this.Load += new System.EventHandler(this.ConsultarCursos_Load);
             this.Controls.SetChildIndex(this.BtnNuevo, 0);
             this.Controls.SetChildIndex(this.BtnTodos, 0);

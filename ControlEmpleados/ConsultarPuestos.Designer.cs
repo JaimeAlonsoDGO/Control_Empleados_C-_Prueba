@@ -60,7 +60,7 @@
             this.ClientSize = new System.Drawing.Size(796, 540);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarPuestos";
-            this.Text = "ConsultarPuestos";
+            this.Text = "Puestos Registrados";
             this.Load += new System.EventHandler(this.ConsultarPuestos_Load);
             this.Controls.SetChildIndex(this.BtnNuevo, 0);
             this.Controls.SetChildIndex(this.BtnTodos, 0);

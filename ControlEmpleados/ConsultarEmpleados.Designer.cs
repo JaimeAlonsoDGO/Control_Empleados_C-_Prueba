@@ -80,7 +80,7 @@
             this.Controls.Add(this.BtnActivos);
             this.Controls.Add(this.label1);
             this.Name = "ConsultarEmpleados";
-            this.Text = "ConsultarEmpleados";
+            this.Text = "Empleados Registrados";
             this.Controls.SetChildIndex(this.BtnNuevo, 0);
             this.Controls.SetChildIndex(this.BtnTodos, 0);
             this.Controls.SetChildIndex(this.BtnSalir, 0);

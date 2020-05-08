@@ -120,7 +120,7 @@
             this.MinimumSize = new System.Drawing.Size(697, 364);
             this.Name = "VentanaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaLogin";
+            this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaLogin_FormClosed);
             this.Controls.SetChildIndex(this.BtnSalir, 0);
             this.Controls.SetChildIndex(this.label1, 0);
