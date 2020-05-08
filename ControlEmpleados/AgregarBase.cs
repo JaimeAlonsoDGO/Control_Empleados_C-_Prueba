@@ -145,6 +145,12 @@ namespace ControlEmpleados
             }
         }//EliminarElementosDGV
 
+        public void AgregarIncidencia(string empleado, string incidencia, string descripcion)
+        {
+            string cmd = string.Format("EXEC GuardarIncidencia '{0}', '{1}', '{2}'", empleado, incidencia, descripcion);
+            Utilidades.Ejecutar(cmd);
+        }//Agregar Incidencia
+
         public void LimpiarTxtBox()
         {
             foreach(Control c in this.Controls)
