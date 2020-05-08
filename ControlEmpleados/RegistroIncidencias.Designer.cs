@@ -43,14 +43,14 @@
             this.txtDescripcion = new MiBiblioteca.ErrorTxtBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
             // 
-            this.BtnSalir.Location = new System.Drawing.Point(565, 483);
+            this.BtnSalir.Location = new System.Drawing.Point(565, 519);
             this.BtnSalir.Size = new System.Drawing.Size(202, 32);
             // 
             // errorProvider1
@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 64);
+            this.label1.Location = new System.Drawing.Point(106, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 18);
             this.label1.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(288, 64);
+            this.label2.Location = new System.Drawing.Point(288, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 18);
             this.label2.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(497, 64);
+            this.label3.Location = new System.Drawing.Point(497, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 18);
             this.label3.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(720, 64);
+            this.label4.Location = new System.Drawing.Point(720, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 18);
             this.label4.TabIndex = 4;
@@ -100,7 +100,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(30, 96);
+            this.txtID.Location = new System.Drawing.Point(30, 132);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(202, 23);
@@ -112,7 +112,7 @@
             // txtMaterno
             // 
             this.txtMaterno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaterno.Location = new System.Drawing.Point(696, 96);
+            this.txtMaterno.Location = new System.Drawing.Point(696, 132);
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.ReadOnly = true;
             this.txtMaterno.Size = new System.Drawing.Size(202, 23);
@@ -124,7 +124,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(249, 96);
+            this.txtNombre.Location = new System.Drawing.Point(249, 132);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(202, 23);
@@ -136,7 +136,7 @@
             // txtPaterno
             // 
             this.txtPaterno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaterno.Location = new System.Drawing.Point(470, 96);
+            this.txtPaterno.Location = new System.Drawing.Point(470, 132);
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.ReadOnly = true;
             this.txtPaterno.Size = new System.Drawing.Size(202, 23);
@@ -148,7 +148,7 @@
             // txtIncidencia
             // 
             this.txtIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIncidencia.Location = new System.Drawing.Point(409, 179);
+            this.txtIncidencia.Location = new System.Drawing.Point(409, 215);
             this.txtIncidencia.Name = "txtIncidencia";
             this.txtIncidencia.ReadOnly = true;
             this.txtIncidencia.Size = new System.Drawing.Size(274, 23);
@@ -161,7 +161,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(495, 144);
+            this.label5.Location = new System.Drawing.Point(495, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 18);
             this.label5.TabIndex = 10;
@@ -172,7 +172,7 @@
             this.txtDescripcion.AcceptsReturn = true;
             this.txtDescripcion.AcceptsTab = true;
             this.txtDescripcion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(109, 265);
+            this.txtDescripcion.Location = new System.Drawing.Point(109, 301);
             this.txtDescripcion.MaxLength = 200;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -186,7 +186,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(495, 227);
+            this.label6.Location = new System.Drawing.Point(495, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 18);
             this.label6.TabIndex = 12;
@@ -202,34 +202,34 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "REGISTRO DE INCIDENCIAS";
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(924, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(924, 132);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(114, 23);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // button2
+            // btnGuardar
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(291, 484);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 32);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "GUARDAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(291, 520);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(202, 32);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // RegistroIncidencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 539);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1095, 589);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDescripcion);
@@ -243,6 +243,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1111, 628);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1111, 628);
             this.Name = "RegistroIncidencias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroIncidencias";
@@ -260,8 +264,8 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.BtnSalir, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.btnBuscar, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -284,7 +288,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

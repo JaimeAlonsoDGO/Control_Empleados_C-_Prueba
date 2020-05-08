@@ -17,15 +17,16 @@ namespace ControlEmpleados
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             ConsultarEmpleados ConEmpl = new ConsultarEmpleados();
-            ConEmpl.ShowDialog();
+            ConEmpl.ShowDialog();        
 
             txtID.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim();
             txtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
             txtPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
             txtMaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Trim();
-        }
+            txtIncidencia.Text = DateTime.Now.ToString().Trim();         
+        }//btnBuscar CLIC
     }
 }

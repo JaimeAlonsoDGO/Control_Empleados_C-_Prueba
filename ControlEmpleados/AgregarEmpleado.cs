@@ -119,7 +119,7 @@ namespace ControlEmpleados
         {
             // Creando oinstancia de vista ConsultarEmpleados
             ConsultarEmpleados ConEmpl = new ConsultarEmpleados();
-            ConEmpl.ShowDialog();       
+            ConEmpl.ShowDialog();
 
             //Almacenando ID del empleado, fecha de nacimienoto y estatus, en una variable, a partir de nuestra consulta realizada
             string id_empleado = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString().Trim();
@@ -127,7 +127,7 @@ namespace ControlEmpleados
 
             //Asignando valores a nuestro formulario DATOS GENERALES
             TxtID.Text = id_empleado;
-            
+
             TxtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
             TxtApellidoPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
             TxtApellidoMaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Trim();
@@ -151,7 +151,7 @@ namespace ControlEmpleados
                 imagen = ds.Tables[0].Rows[0][0].ToString().Trim();
                 PbFoto.Image = Image.FromFile(imagen);
             }//TRY 
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("El empleado no tiene asignada una fotografía.");
             }//catch
@@ -167,7 +167,7 @@ namespace ControlEmpleados
                     con_fila += 1;
                 }
             }//try
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("El empleado aún no tiene cursos registrados \n");
             }//Catch
@@ -187,7 +187,6 @@ namespace ControlEmpleados
             {
                 MessageBox.Show("El empleado aún no tiene puestos registrados \n");
             }//Catch
-
 
         } // EditarExistente
 
