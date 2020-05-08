@@ -166,16 +166,19 @@ namespace ControlEmpleados
                     dataGridView1.Rows.Add(ds.Tables[0].Rows[con_fila][0].ToString().Trim(), ds.Tables[0].Rows[con_fila][1].ToString().Trim());
                     con_fila += 1;
                 }
+
             }//try
             catch (Exception error)
             {
                 MessageBox.Show("El empleado aún no tiene cursos registrados \n");
             }//Catch
 
+            
             //ASIGNANDO PUESTOS A DATAGRIDVIEW
             try
             {
                 con_fila = 0;
+                ds.Clear();
                 ds = ObtenerPuestos(id_empleado);
                 foreach (DataRow dr in ds.Tables[0].Rows) //Recorriendo cada renglon en el DataSet
                 {
@@ -188,6 +191,23 @@ namespace ControlEmpleados
                 MessageBox.Show("El empleado aún no tiene puestos registrados \n");
             }//Catch
 
+            //ASIGNANDO INCIDENCIAS
+            try
+            {
+                con_fila = 0;
+                ds.Clear();
+                ds = ObtenerIncidenciasAE(id_empleado);
+                foreach (DataRow dr in ds.Tables[0].Rows) //Recorriendo cada renglon en el DataSet
+                {
+                    dgvIncidencias.Rows.Add(ds.Tables[0].Rows[con_fila][0].ToString().Trim(), ds.Tables[0].Rows[con_fila][1].ToString().Trim());
+                    con_fila += 1;
+                }
+            }//try
+            catch(Exception error)
+            {
+                MessageBox.Show("El empleado no tiene incidencias registradas \n");
+            }
+            
         } // EditarExistente
 
         private void btnAgregarPuesto_Click(object sender, EventArgs e)

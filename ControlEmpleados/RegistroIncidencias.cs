@@ -27,7 +27,8 @@ namespace ControlEmpleados
             TxtNombre.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim();
             txtPaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Trim();
             txtMaterno.Text = ConEmpl.dataGridView1.Rows[ConEmpl.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Trim();
-            txtIncidencia.Text = DateTime.Now.ToString().Trim();         
+            txtIncidencia.Text = DateTime.Now.ToString().Trim();
+            txtDescripcion.Focus();
         }//btnBuscar CLIC
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace ControlEmpleados
                     AgregarIncidencia(TxtID.Text.ToString().Trim(), txtIncidencia.Text.ToString().Trim(), txtDescripcion.Text.ToString().Trim());
                     MessageBox.Show("Guardado exitosamente.");
                     LimpiarTxtBox();
+                    btnBuscar.Focus();
                 }//TRY
                 catch(Exception error)
                 {

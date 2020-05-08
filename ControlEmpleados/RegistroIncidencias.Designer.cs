@@ -71,6 +71,7 @@
             this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(202, 23);
             this.TxtID.SoloNumeros = false;
+            this.TxtID.TabIndex = 22;
             this.TxtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtNombre
@@ -78,6 +79,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(242, 133);
             this.TxtNombre.ReadOnly = true;
             this.TxtNombre.Size = new System.Drawing.Size(202, 23);
+            this.TxtNombre.TabIndex = 13;
             this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnSalir
@@ -163,7 +165,7 @@
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescripcion.Size = new System.Drawing.Size(868, 164);
             this.txtDescripcion.SoloNumeros = false;
-            this.txtDescripcion.TabIndex = 11;
+            this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.Validar = true;
             // 
             // label6
@@ -182,7 +184,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(924, 132);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(114, 23);
-            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);

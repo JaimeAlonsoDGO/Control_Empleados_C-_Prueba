@@ -80,5 +80,12 @@ namespace ControlEmpleados
             AgEmpleado.Show();
             AgEmpleado.button1_Click(this, null);
         }
+
+        private void agregarIncidenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroIncidencias RIncidencias = new RegistroIncidencias();
+            RIncidencias.MdiParent = this;
+            RIncidencias.Show();
+        }
     }
 }

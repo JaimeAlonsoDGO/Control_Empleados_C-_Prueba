@@ -78,8 +78,6 @@
             this.dgvIncidencias = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConceptoIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnQuitarIncidencia = new System.Windows.Forms.Button();
-            this.btnAgregarIncidencia = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).BeginInit();
@@ -600,6 +598,7 @@
             // 
             this.dgvIncidencias.AllowUserToAddRows = false;
             this.dgvIncidencias.AllowUserToDeleteRows = false;
+            this.dgvIncidencias.AllowUserToResizeRows = false;
             this.dgvIncidencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -627,26 +626,6 @@
             this.ConceptoIncidencia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ConceptoIncidencia.Width = 310;
             // 
-            // btnQuitarIncidencia
-            // 
-            this.btnQuitarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarIncidencia.Location = new System.Drawing.Point(982, 553);
-            this.btnQuitarIncidencia.Name = "btnQuitarIncidencia";
-            this.btnQuitarIncidencia.Size = new System.Drawing.Size(125, 25);
-            this.btnQuitarIncidencia.TabIndex = 47;
-            this.btnQuitarIncidencia.Text = "Quitar Incidencia";
-            this.btnQuitarIncidencia.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarIncidencia
-            // 
-            this.btnAgregarIncidencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarIncidencia.Location = new System.Drawing.Point(834, 553);
-            this.btnAgregarIncidencia.Name = "btnAgregarIncidencia";
-            this.btnAgregarIncidencia.Size = new System.Drawing.Size(125, 25);
-            this.btnAgregarIncidencia.TabIndex = 46;
-            this.btnAgregarIncidencia.Text = "Agregar Incidencia";
-            this.btnAgregarIncidencia.UseVisualStyleBackColor = true;
-            // 
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
@@ -663,8 +642,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 671);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.btnQuitarIncidencia);
-            this.Controls.Add(this.btnAgregarIncidencia);
             this.Controls.Add(this.dgvIncidencias);
             this.Controls.Add(this.btnQuitarPuesto);
             this.Controls.Add(this.btnAgregarPuesto);
@@ -753,8 +730,6 @@
             this.Controls.SetChildIndex(this.btnAgregarPuesto, 0);
             this.Controls.SetChildIndex(this.btnQuitarPuesto, 0);
             this.Controls.SetChildIndex(this.dgvIncidencias, 0);
-            this.Controls.SetChildIndex(this.btnAgregarIncidencia, 0);
-            this.Controls.SetChildIndex(this.btnQuitarIncidencia, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbFoto)).EndInit();
@@ -813,8 +788,6 @@
         private System.Windows.Forms.Button btnAgregarPuesto;
         private System.Windows.Forms.Button btnQuitarPuesto;
         private System.Windows.Forms.DataGridView dgvIncidencias;
-        private System.Windows.Forms.Button btnQuitarIncidencia;
-        private System.Windows.Forms.Button btnAgregarIncidencia;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;

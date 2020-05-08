@@ -36,13 +36,15 @@
             this.crearEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirPuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarIncidenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +53,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.accionesToolStripMenuItem,
-            this.cursosToolStripMenuItem,
-            this.puestosToolStripMenuItem});
+            this.incidenciasToolStripMenuItem,
+            this.puestosToolStripMenuItem,
+            this.cursosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(805, 24);
@@ -107,6 +110,12 @@
             this.editarEmpleadoToolStripMenuItem.Text = "Editar Empleado";
             this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click);
             // 
+            // eliminarEmpleadoToolStripMenuItem
+            // 
+            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
+            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
+            // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -119,14 +128,14 @@
             // añadirCursoToolStripMenuItem
             // 
             this.añadirCursoToolStripMenuItem.Name = "añadirCursoToolStripMenuItem";
-            this.añadirCursoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.añadirCursoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.añadirCursoToolStripMenuItem.Text = "Añadir Curso";
             this.añadirCursoToolStripMenuItem.Click += new System.EventHandler(this.añadirCursoToolStripMenuItem_Click);
             // 
             // consultarCursosToolStripMenuItem
             // 
             this.consultarCursosToolStripMenuItem.Name = "consultarCursosToolStripMenuItem";
-            this.consultarCursosToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.consultarCursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarCursosToolStripMenuItem.Text = "Consultar Cursos";
             this.consultarCursosToolStripMenuItem.Click += new System.EventHandler(this.consultarCursosToolStripMenuItem_Click);
             // 
@@ -142,22 +151,31 @@
             // añadirPuestoToolStripMenuItem
             // 
             this.añadirPuestoToolStripMenuItem.Name = "añadirPuestoToolStripMenuItem";
-            this.añadirPuestoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.añadirPuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.añadirPuestoToolStripMenuItem.Text = "Añadir Puesto";
             this.añadirPuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPuestoToolStripMenuItem_Click);
             // 
             // consultarPuestosToolStripMenuItem
             // 
             this.consultarPuestosToolStripMenuItem.Name = "consultarPuestosToolStripMenuItem";
-            this.consultarPuestosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.consultarPuestosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarPuestosToolStripMenuItem.Text = "Consultar Puestos";
             this.consultarPuestosToolStripMenuItem.Click += new System.EventHandler(this.consultarPuestosToolStripMenuItem_Click);
             // 
-            // eliminarEmpleadoToolStripMenuItem
+            // incidenciasToolStripMenuItem
             // 
-            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
-            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar Empleado";
+            this.incidenciasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarIncidenciaToolStripMenuItem});
+            this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
+            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.incidenciasToolStripMenuItem.Text = "Incidencias";
+            // 
+            // agregarIncidenciaToolStripMenuItem
+            // 
+            this.agregarIncidenciaToolStripMenuItem.Name = "agregarIncidenciaToolStripMenuItem";
+            this.agregarIncidenciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarIncidenciaToolStripMenuItem.Text = "Agregar Incidencia";
+            this.agregarIncidenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarIncidenciaToolStripMenuItem_Click);
             // 
             // ContenedorPrincipal
             // 
@@ -195,5 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem añadirPuestoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarPuestosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarIncidenciaToolStripMenuItem;
     }
 }

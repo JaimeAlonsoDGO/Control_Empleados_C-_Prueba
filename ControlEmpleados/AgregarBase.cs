@@ -151,6 +151,13 @@ namespace ControlEmpleados
             Utilidades.Ejecutar(cmd);
         }//Agregar Incidencia
 
+        public DataSet ObtenerIncidenciasAE (string empleado)
+        {
+            string cmd = string.Format("EXEC ObtenerIncidencias '{0}'", empleado);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            return ds;
+        }//Obtener Incidencias en la ventana Agregar Empleado
+
         public void LimpiarTxtBox()
         {
             foreach(Control c in this.Controls)
