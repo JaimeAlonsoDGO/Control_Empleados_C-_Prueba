@@ -63,12 +63,18 @@ namespace MiBiblioteca
                         } //ForEach
 
                     }//IF Solo numeros
+
+                    if(Obj.MaximoPermitido == true) //Validand propiedad MaximoPermitido
+                    {
+                        if (Obj.Text.Length > 200)
+                            HayErrores = true;
+                        ErrorProvider.SetError(Obj, "Se deben ingresar menos de 200 caracteres");
+
+                    }//IF
                 }//IF
             }//ForEach
             return HayErrores; //Devolvemos nuestra variable
         }//Validar formulario
-
-
 
     }//Utilidades
 }//Biblioteca

@@ -28,5 +28,11 @@ namespace MiBiblioteca
             set;
             get;
         }//SoloNumeros
+
+        public Boolean MaximoPermitido
+        {
+            set;
+            get;
+        }//MaximoPermitido
     }
 }

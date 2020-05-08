@@ -21,3 +21,4 @@ C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\ControlEmpleados\obj\Deb
 C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\ControlEmpleados\obj\Debug\ControlEmpleados.AgregarPuesto.resources
 C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\ControlEmpleados\obj\Debug\ControlEmpleados.AgregarCurso.resources
 C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\ControlEmpleados\obj\Debug\ControlEmpleados.AgregarEmpleado.resources
+C:\Users\User\Desktop\ControlEmpleados\ControlEmpleados\ControlEmpleados\obj\Debug\ControlEmpleados.RegistroIncidencias.resources
