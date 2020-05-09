@@ -158,6 +158,14 @@ namespace ControlEmpleados
             return ds;
         }//Obtener Incidencias en la ventana Agregar Empleado
 
+        public DataSet ObtenerDatosGenerales (string empleado)
+        {
+            string cmd = string.Format("EXEC GenerarReporte '{0}'", empleado);
+            DataSet ds = Utilidades.Ejecutar(cmd);
+
+            return ds;
+        }//ObtenerDatosGenerales
+
         public void LimpiarTxtBox()
         {
             foreach(Control c in this.Controls)

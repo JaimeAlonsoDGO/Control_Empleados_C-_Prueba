@@ -237,5 +237,27 @@ namespace ControlEmpleados
 
             TxtID.Text = clave;
         }//Se genera el ID de empleado a partir de la CURP
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if(TxtID.Text != "")
+            {
+                DataSet ds = ObtenerDatosGenerales(TxtID.Text.Trim());
+
+                //Creando ventana reporte
+                Reporte rp = new Reporte();
+                rp.reportViewer1.LocalReport.DataSources[0].Value = ds.Tables[0];
+                rp.ShowDialog();
+                LimpiarTxtBox();
+                dataGridView1.Rows.Clear();
+                dgvIncidencias.Rows.Clear();
+                dgvPuestos.Rows.Clear();
+                PbFoto.Image = null;
+            }
+            else
+            {
+                MessageBox.Show("No hay datos de empleado");
+            }
+        }
     }
 }

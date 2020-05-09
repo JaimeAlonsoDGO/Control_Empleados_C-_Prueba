@@ -635,6 +635,7 @@
             this.btnImprimir.TabIndex = 48;
             this.btnImprimir.Text = "IMPRIMIR REPORTE";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // AgregarEmpleado
             // 
